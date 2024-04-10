@@ -1,42 +1,65 @@
-# Take me home Challenge
-Collection of take me home challenges
+# Data Scientist Challenge
 
-Each file in this repository describes a take me home challenge, as given by the issue-ing company. Some are more or less reasonable.
+## Higher Education Students Performance Evaluation
 
-Please make sure you do not distribute this repository or the datasets as they do come from real companies.
-
-## Challenges
+This project focuses on analyzing student behavior and study patterns with specific objectives. It aims to explore demographic characteristics associated with test success, evaluate study effectiveness, uncover dataset trends, and provide insightful analyses on their implications.
 
 
-|  Challenge | Data tables  | Complexity  |
-|---|---|---|
-| [Data Scientist TriAD](data_scientist_triad.md)  | takemehome.triad  |  Easy-to-Medium, depending if only EDA, the rest is not achievable in 4-6 hours |
-| [Data Analyst Artsy](data_analyst_artsy.md)   |   takemehome.artsy_test_user &  takemehome.artsy_pageviews   |  Easy to Medium (easiest from all)  |
-| [Senior Data Scientist / Engineer K](senior_data_scientist_engineer_k.md)  | takemehome.k_notifications  |  Medium to Difficult, depending on how clean and modular you want to make the code  |
-[Product Analyst Amboss](product_analyst_amboss.md)   |   takemehome.amboss_user_profile &  takemehome.amboss_trial_conversions   |  Easy to Medium (can also be done in SQL)  |
-[Data Scientist Prognostica](data_science_prognostica_de.md)   |   takemehome.prognostica_afo &  prognostica_daten_kunden   |  Medium (requires Time Series Knowledge and is in German)  |
+The data was collected from the Faculty of Engineering and Faculty of Educational Sciences students in 2019 and donated to [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/dataset/856/higher+education+students+performance+evaluation) . The purpose is to predict students' end-of-term performances using ML techniques.
+  
+## Setup
+
+* setting the python version locally to 3.11.3
+* creating a virtual environment using the `venv` module
+* activating your newly created environment 
+* upgrading `pip` (This step is not absolutely necessary, but will save you trouble when installing some packages.)
+* installing the required packages via `pip`
 
 
-## Deliverables
+Please, check before that you met the requirements
 
-Each challenge will have its own deliverables, some a bit too much than the allocated time. What you need to make sure you have:
+```bash
+pip freeze > requirements.txt
+```
 
-Notebook with EDA/Modelling:
- - explanation of task ( you can repeat the text from the challenge in the notebook)
- - code and viz
- - everything documented
- - conclusions
- - every data question/task mentioned in the challenge should be tackled!
+## Installing the enviroment  
+### **`MacOS`** type the following commands :
+```
+pyenv local 3.11.3
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+### **`WindowsOS`** type the following commands :
 
+- Install the virtual environment and the required packages by following commands.
 
-**Note:**  *If it is not written down, it does not exist!* When you submit TMH challenges the companies evaluated them most of the time in your absence, so it is more important that you explain everything you do and why than do more things!
+   For `PowerShell` CLI :
 
-## Presentation
+    ```PowerShell
+    pyenv local 3.11.3
+    python -m venv .venv
+    .venv\Scripts\Activate.ps1
+    python.exe -m pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
 
-Each person gets 3 minutes to scroll through their work, any graph that is not interpreted in text cannot be talked about. Why? When you submit a challenge like this, this will be the time the person will allocate to browse over it and you will not be in the room to defend it.
+    For `Git-bash` CLI :
+    ```
+    pyenv local 3.11.3
+    python -m venv .venv
+    source .venv/Scripts/activate
+    python.exe -m pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
 
-## Getting the data
+    **`Note:`**
+    If you encounter an error when trying to run `pip install --upgrade pip`, try using the following command:
+    ```Bash
+    'python.exe -m pip install --upgrade pip'
+    ```
 
-Connect to the ds-sql-playground database with the bootcamp username and password in order to get the data.
-
- Hostname: ds-sql-playground.c8g8r1deus2v.eu-central-1.rds.amazonaws.com
+In order to upgrade all packages in requirements.txt you can `pip install upgrade-requirements`
+and then run: `upgrade-requirements`.
+This will also automatically update the requirements.txt document. (Works only with pinned (`==`) packages at the moment.)
