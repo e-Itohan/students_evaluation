@@ -9,3 +9,7 @@ python-dotenv==1.0.1
 psycopg2-binary==2.9.9
 SQLAlchemy==2.0.29
 xgboost==2.0.3
+keras==3.2.1
+scikeras==0.13.0
+tensorflow==2.16.1
+np_utils==0.6.0
