@@ -56,7 +56,8 @@ pip install -r requirements.txt
 
     **`Note:`**
     If you encounter an error when trying to run `pip install --upgrade pip`, try using the following command:
-    ```Bash
+    For `WindowsOS`:
+    ```
     'python.exe -m pip install --upgrade pip'
     ```
 
